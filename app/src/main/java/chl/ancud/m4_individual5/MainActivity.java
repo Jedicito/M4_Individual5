@@ -3,6 +3,7 @@ package chl.ancud.m4_individual5;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,7 +26,20 @@ public class MainActivity extends AppCompatActivity {
         btn_showToast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getBaseContext(), "Hola", Toast.LENGTH_SHORT).show();
+                Toast tostada = new Toast(getBaseContext());
+                tostada.setText("Hola");
+                tostada.setDuration(Toast.LENGTH_SHORT);
+                tostada.setGravity(Gravity.TOP, 0, 0);
+                tostada.show();
+            }
+        });
+
+        btn_addCounter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Integer numero = Integer.parseInt(txV_contador.getText().toString());
+                numero++;
+                txV_contador.setText(numero.toString());
             }
         });
 
