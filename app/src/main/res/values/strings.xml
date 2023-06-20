@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">M4_Individual5</string>
+    <string name="btn_showToast">Mostrar Toast</string>
+    <string name="btn_addCounter">Incrementar contador</string>
+</resources>
